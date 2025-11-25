@@ -1,0 +1,127 @@
+instagram_research_task:
+  description: >
+    Research Instagram content trends, strategies, and opportunities specifically for Etsy shops
+    targeting Deadhead/Grateful Dead fans, similar to @StellarStylesandMore. Focus on:
+    - Current Instagram trends and content formats that perform well for Etsy sellers targeting Deadheads
+    - Competitor analysis of successful Etsy shop Instagram accounts selling Grateful Dead merchandise
+    - Best posting times and content types that drive engagement for Deadhead-focused handmade/craft businesses
+    - Hashtag strategies and engagement tactics used by top-performing Deadhead/Grateful Dead Etsy shop accounts
+    - Visual content trends (Reels, carousels, Stories) that convert Deadhead followers to customers
+    - Content themes and storytelling approaches that resonate with Deadhead community values (community, music, tie-dye, tour culture, Jerry Garcia references)
+    - Seasonal content opportunities and trending topics relevant to Grateful Dead culture (anniversary dates, tour dates, song references)
+    - Understanding Deadhead community language, references, and cultural touchpoints that create authentic connections
+
+    Provide actionable insights that can be immediately applied to create engaging Instagram content
+    for @StellarStylesandMore that authentically connects with Deadhead/Grateful Dead fans and drives
+    traffic to the Etsy shop and increases sales.
+  expected_output: >
+    A comprehensive research report containing:
+    - Top 5-7 trending content formats/ideas for Etsy shop Instagram accounts
+    - Competitor analysis with 3-5 successful strategies to emulate
+    - Recommended posting times and frequency based on Etsy shop audience behavior
+    - Hashtag research with 15-20 relevant hashtags organized by category
+    - Content theme suggestions aligned with @StellarStylesandMore's brand and Deadhead culture
+    - Visual content recommendations (Reels ideas, carousel concepts, Story strategies) that appeal to Deadheads
+    - Engagement tactics specific to converting Deadhead Instagram followers to Etsy customers
+    - Deadhead-specific hashtag research (#gratefuldead, #deadhead, #tiedye, #jerrygarcia, etc.)
+    All formatted as clear, actionable bullet points and sections ready for content creation.
+  agent: social_media_researcher
+
+content_creation_task:
+  description: >
+    Using the research insights provided, create engaging Instagram content for @StellarStylesandMore.
+    The content should include:
+    - A compelling caption (150-300 words) that tells a story, showcases products, and includes
+      a clear call-to-action directing followers to the Etsy shop
+    - Content ideas for the visual component (describe what images/videos should feature)
+    - Post format recommendation (single image, carousel, Reel, etc.) with reasoning
+    - Suggested content angle/hook that will stop the scroll
+
+    The content must:
+    - Feel authentic and aligned with both Etsy shop values (handmade, unique, personal) AND Deadhead culture
+    - Include natural mentions of products without being overly salesy
+    - Use storytelling that connects with Deadhead values (community, music appreciation, authenticity, tie-dye aesthetic)
+    - Incorporate Grateful Dead references, song lyrics, or cultural touchpoints authentically (when appropriate)
+    - Be optimized for Instagram's visual-first platform
+    - Include engagement prompts (questions, polls, etc.) that speak to Deadhead community interests
+    - Maintain brand voice that's warm, approachable, inspiring, and respectful of Grateful Dead culture
+    - Avoid cultural appropriation - be authentic and respectful when referencing Deadhead culture
+
+    Reference the research context to ensure the content aligns with trending formats and
+    best practices while staying true to @StellarStylesandMore's unique brand identity and
+    authentically connecting with Deadhead/Grateful Dead fans.
+  expected_output: >
+    Complete Instagram post content package including:
+    - Caption text (150-300 words) with proper formatting, line breaks, and emoji usage
+    - Visual content description (what images/videos should show)
+    - Post format recommendation with brief explanation
+    - Content hook/angle that captures attention
+    - Engagement elements (questions, CTAs, etc.)
+    - Brief explanation of how this content aligns with research insights
+    All formatted clearly and ready for editing.
+  agent: content_creator
+  context:
+    - instagram_research_task
+
+content_editing_task:
+  description: >
+    Review and refine the Instagram content created for @StellarStylesandMore. Your editing
+    should focus on:
+    - Grammar, spelling, and punctuation accuracy
+    - Improving flow and readability while maintaining the creator's voice
+    - Ensuring brand consistency and tone alignment
+    - Tightening copy to maximize impact without losing authenticity
+    - Verifying that the call-to-action is clear and compelling
+    - Checking that engagement prompts are effective and natural
+    - Ensuring the content feels polished but not overly corporate
+
+    Make improvements that enhance clarity, engagement potential, and professionalism while
+    preserving the authentic, warm, handmade brand voice that resonates with both Etsy customers
+    and Deadhead/Grateful Dead fans. Ensure any Grateful Dead references or Deadhead cultural
+    elements are used respectfully and authentically. Do not make changes that alter the core
+    message or creative direction unless there are clear errors or inconsistencies.
+  expected_output: >
+    Polished Instagram content package with:
+    - Edited and refined caption (grammatically correct, improved flow, optimized readability)
+    - Any improvements to visual content description
+    - Confirmed post format recommendation
+    - Refined engagement elements
+    - Brief notes on key edits made and why
+    - Final version ready for optimization
+    All content should be error-free and publication-ready.
+  agent: content_editor
+  context:
+    - content_creation_task
+
+content_optimization_task:
+  description: >
+    Optimize the edited Instagram content for maximum performance on Instagram. Apply
+    platform-specific optimization strategies including:
+    - Hashtag strategy: Select 20-30 relevant hashtags (mix of popular, niche, and branded)
+      organized by reach potential, ensuring they're relevant to @StellarStylesandMore's niche.
+      Include Deadhead/Grateful Dead specific hashtags like #gratefuldead, #deadhead, #tiedye,
+      #jerrygarcia, #deadandcompany, #philadelphia, #bobweir, #deadheadcommunity, etc., along
+      with Etsy and handmade product hashtags
+    - Caption optimization: Ensure the caption structure maximizes engagement (hook, story, CTA)
+    - Engagement optimization: Enhance CTAs and engagement prompts for maximum response
+    - Posting time recommendations: Suggest optimal posting times based on Instagram algorithm
+    - Cross-platform considerations: Note how this content could be adapted for Stories or Reels
+    - Algorithm optimization: Ensure content structure aligns with Instagram's current algorithm
+      preferences (engagement signals, completion rates, etc.)
+
+    Use the research context to inform hashtag selection and optimization strategies. Ensure
+    all optimizations maintain the authentic brand voice while maximizing reach and engagement.
+  expected_output: >
+    Fully optimized Instagram post ready for publication, including:
+    - Final optimized caption with strategic formatting
+    - Complete hashtag list (20-30 hashtags) organized by category with reach notes
+    - Optimized engagement elements and CTAs
+    - Recommended posting time window with reasoning
+    - Visual content optimization notes
+    - Brief explanation of optimization strategies applied
+    - Final checklist confirming all optimization elements are in place
+    Content should be ready to copy-paste directly into Instagram with hashtags included.
+  agent: content_optimizer
+  context:
+    - instagram_research_task
+    - content_editing_task
