@@ -33,6 +33,9 @@ def train():
     """
     Train the crew for a given number of iterations.
     """
+    if len(sys.argv) < 3:
+        raise Exception("Missing required arguments. Usage: train <n_iterations> <filename>")
+
     inputs = {
         'platform': 'Instagram',
         'niche': 'Deadhead/Grateful Dead fan community',
@@ -48,6 +51,9 @@ def replay():
     """
     Replay the crew execution from a specific task.
     """
+    if len(sys.argv) < 2:
+        raise Exception("Missing required argument. Usage: replay <task_id>")
+
     try:
         SocialmediaCrew().crew().replay(task_id=sys.argv[1])
 
@@ -58,6 +64,9 @@ def test():
     """
     Test the crew execution and returns the results.
     """
+    if len(sys.argv) < 3:
+        raise Exception("Missing required arguments. Usage: test <n_iterations> <eval_llm>")
+
     inputs = {
         'platform': 'Instagram',
         'niche': 'Deadhead/Grateful Dead fan community',
